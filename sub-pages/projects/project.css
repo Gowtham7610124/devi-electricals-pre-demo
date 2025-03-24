@@ -29,14 +29,13 @@
    font-size: 50px;
    font-weight: 900;
    font-family: "Figtree", sans-serif;
-
+   padding: 50px 0 20px 0;
 }
 .our-work{
    font-size: 50px;
    font-weight: 900;
    padding: 100px 0 0 0;
    font-family: "Figtree", sans-serif;
-
 }
 /* .click_card_container */
 
@@ -208,8 +207,32 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
       margin: 0 10px 0 10px !important;
    }
 
-
    .nav-tabs .active{
       width: fit-content !important;
+   }
+
+   .our-company {
+      font-size: 50px;
+      font-weight: 900;
+      font-family: "Figtree", sans-serif;
+      padding: 50px 0 0px 0;
+   }
+
+   .our-work{
+      font-size: 50px;
+      font-weight: 900;
+      padding: 10px 0 0 0;
+      font-family: "Figtree", sans-serif;
+   }
+
+   .service-involved-headding{
+      font-size: 50px;
+      font-weight: 900;
+      text-align: center;
+      padding: 20px 0 30px 0;
+   }
+
+   .project_list-container{
+      padding: 50px 0 20px 0;
    }
  }

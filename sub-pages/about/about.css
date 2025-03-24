@@ -184,4 +184,11 @@
     .about_us_container img{
         width: 100%;
     }
+
+    .about_us_container img,
+.who_we_container img,
+.why_choose_container img{
+    width: 100%;
+    margin: 30px 0 40px 0;
+}
 }

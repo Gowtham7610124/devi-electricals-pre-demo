@@ -54,7 +54,7 @@ html {
     display: flex;
     padding: 0px;
     backdrop-filter: blur(10px);
-    padding: 16px 32px;
+    padding: 0px 32px;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.1);
 }
@@ -312,7 +312,7 @@ footer{
 .fw-500{
     font-weight: 700;
 }
-.contact_us-container .container{
+.contact_us-container {
     padding: 90px 0 90px 0;
 }
 .contact_us-container .container .fade-in{
@@ -566,6 +566,9 @@ footer{
     .contact_us-container .container .fade-in{
         display: flex;
         flex-direction: column;
+    }
+    .contact_us-container {
+        padding: 10px 0 10px 0;
     }
     /* .contact_us-container .contact_details{
         display: flex;
