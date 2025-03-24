@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devi Electrical & Agencies</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="../../plugins/jquery/jquery.min.js"></script>
     <link rel="stylesheet" href="../../plugins/bootstrap/css/bootstrap.min.css">
@@ -22,7 +25,7 @@
         <div class="nav-container">
             <div class="container">
                 <div class="logo">
-                    <img src="assets/logo.png" alt="">
+                    <img src="../../assets/logo.png" alt="">
                 </div>
                 <ul class="list-unstyled nav-list">
                     <li><a href="/index.html">Home</a></li>
@@ -31,8 +34,9 @@
                     <li><a href=".././sub-pages/service/service.html">Service</a></li>
                     <li><a href="../../sub-pages/contact/contact.html">Contact</a></li>
                 </ul>
-                <div class="nav_contact">
-                    <button class="btn btn-info">Contact -></button>
+                <div class="download_broucher">
+                    <button class="btn btn-danger"><a class="text-white" download
+                            href="../../assets/Devi Electricals portfolio.pdf">Download Brouchere</a></button>
                 </div>
                 <div class="text-white menu-icon">
                     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -40,10 +44,11 @@
             </div>
         </div>
 
+        <!-- RESPONSIVE NAVIGATION BAR -->
         <div class="nav-container_responsive">
             <div class="headder-responsive_nav">
                 <div class="logo-container">
-                    <img src="assets/logo.png" alt="">
+                    <img src="../../assets/logo.png" alt="">
                 </div>
                 <div class="p-2 f20 responsive_nav-close">
                     <i class="fa fa-times" aria-hidden="true"></i>
@@ -52,15 +57,18 @@
 
             <div class="nav-list">
                 <ul class="list-unstyled nav-list">
-                    <li class="close_after_click"><a href="/index.html">Home</a></li>
+                    <li class="close_after_click"><a href="/devi-electricals-pre-demo/index.html">Home</a></li>
                     <li class="close_after_click"><a href="../../sub-pages/about/about.html">About</a></li>
                     <li class="close_after_click"><a href="../../sub-pages/projects/project.html">Project</a></li>
-                    <li class="close_after_click"><a href="../../sub-pages/service/service.html">Service</a></li>
-                    <li class="close_after_click"><a href="../../sub-pages/contact/contact.html">Contact</a></li>
+                    <li class="close_after_click"><a href="../service/service.html">Service</a></li>
+                    <li class="close_after_click"><a href="../service/service.html">Contact Us</a></li>
                 </ul>
             </div>
             <div class="download_broucher">
-                <button class="close_after_click"><a href="#">Download Broucher</a></button>
+                <a class="close_after_click" download="../../assets/Devi Electricals portfolio.pdf"
+                    href="../../assets/Devi Electricals portfolio.pdf"><button>Download</button></a>
+                <!-- <button ><a href="">Download
+                        Broucher</a></button> -->
             </div>
             <div class="nav-responsive_info">
                 <h3>Contact Info</h3>
@@ -94,8 +102,225 @@
                 </div>
             </div>
         </div>
+
+        <div class="about_container">
+            <div class="initial_image fade-in">
+                <img class="w-100" src="../../assets/service of DE.jpg" alt="">
+            </div>
+            <!-- About US -->
+            <div class="about_us_container pt80 pb80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <img class="rounded_border fade-in"
+                                src="https://cdn.pixabay.com/photo/2025/03/09/16/02/hare-9457418_1280.jpg" alt="">
+                        </div>
+
+                        <div class="col-md-12 col-lg-6 fade-in">
+                            <p class="about_us_text">About Us</p>
+                            <h2 class="f42 fw-500">Charged with Purpose to Shaping Future of Energy</h2>
+                            <p class="dull-white f18">We more than just a provider of electricity services - we're
+                                pioneers
+                                in
+                                the energy industry,
+                                dedicated to shaping a brighter, more sustainable future for all.</p>
+                            <div class="div_with_tick">
+                                <p class="f18 my-4"><i class="fa fa-check" aria-hidden="true"></i> sample tet for the
+                                    home
+                                    page</p>
+                                <p class="f18 my-4"><i class="fa fa-check" aria-hidden="true"></i> sample tet for the
+                                    home
+                                    page</p>
+                                <p class="f18 my-4"><i class="fa fa-check" aria-hidden="true"></i> sample tet for the
+                                    home
+                                    page</p>
+                            </div>
+                            <button class="btn btn-danger nav-button">About Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Who we Are` -->
+            <div class="who_we_container pt80 pb80 bg-container-dull fade-in">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <p class="about_us_text">About Us</p>
+                            <p>Charged with Purpose to Shaping Future of Energy</p>
+                            <p>We more than just a provider of electricity services - we're pioneers in the energy
+                                industry,
+                                dedicated to shaping a brighter, more sustainable future for all.</p>
+                            <div class="div_with_tick">
+                                <p><i class="fa fa-check" aria-hidden="true"></i> sample tet for the home page</p>
+                                <p><i class="fa fa-check" aria-hidden="true"></i> sample tet for the home page</p>
+                                <p><i class="fa fa-check" aria-hidden="true"></i> sample tet for the home page</p>
+                            </div>
+                            <button class="btn btn-danger">About Us</button>
+                        </div>
+
+                        <div class="col-md-12 col-lg-6">
+                            <img class="rounded_border"
+                                src="https://cdn.pixabay.com/photo/2025/03/09/16/02/hare-9457418_1280.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why choose Us -->
+            <div class="why_choose_container container pt80 pb80 fade-in">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <img class="rounded_border"
+                            src="https://cdn.pixabay.com/photo/2025/03/09/16/02/hare-9457418_1280.jpg" alt="">
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <p class="about_us_text">About Us</p>
+                        <p>Charged with Purpose to Shaping Future of Energy</p>
+                        <p>We more than just a provider of electricity services - we're pioneers in the energy industry,
+                            dedicated to shaping a brighter, more sustainable future for all.</p>
+                        <div>
+                            <div class="d-flex flex-column">
+                                <p class="d-flex justify-content-between"><span>AC installation in one hour</span>
+                                    <span>80%</span>
+                                </p>
+                                <progress class="w-100" value="80" max="100"></progress>
+                                <!-- <p>80%</p> -->
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p class="d-flex justify-content-between"><span>AC installation in one hour</span>
+                                    <span>80%</span>
+                                </p>
+                                <progress class="w-100" value="80" max="100"></progress>
+                                <!-- <p>80%</p> -->
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p class="d-flex justify-content-between"><span>AC installation in one hour</span>
+                                    <span>80%</span>
+                                </p>
+                                <progress class="w-100" value="80" max="100"></progress>
+                                <!-- <p>80%</p> -->
+                            </div>
+                        </div>
+                        <button class="btn btn-danger">About Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="testimonial_container pt80 bg-container-dull fade-in">
+                <div id="craouselContainer" class="swiper-container">
+                    <div class="swiper-wrapper" id="slideHolder">
+                        <!-- Slides -->
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                </div>
+            </div>
+
+            <!-- Running Text -->
+            <div class="running_text_container container fade-in">
+                <div class="running_text pt80 pb80">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                    <img src="https://html.fleexstudio.com/current/assets/img/elements/brand1.png" alt="">
+                </div>
+            </div>
+
+            <!-- Blog -->
+            <!-- <div class="blog_container">
+
+            </div> -->
+            <!-- PRE FOOTER -->
+            <div class="fade-in pre_footer-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 fade-in">
+                            <p>Ready to Power up
+                                your Savings and
+                                Reliability?</p>
+                            <p>Feel free to customize this paragraph to better reflect the specific services offered by
+                                your
+                                IT solution & the unique</p>
+                            <div class="mail_subscription">
+                                <input type="text" placeholder="Email Address">
+                                <button>Subscribe Now</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 pre_footer_image-container">
+                            <img src="../../assets/pre_footer_image.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTER CONTAINER -->
+            <footer class="footer-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 fade-in">
+                            <p class="f24">Current</p>
+                            <p class="dull-white f18">Our goal is to demystify the process, address your concerns, and
+                                empower
+                                you with the
+                                knowledge to embark.</p>
+                        </div>
+                        <div class="col-lg-1 d-lg-block d-none"></div>
+                        <div class="col-lg-2 col-md-6 fade-in">
+                            <p class="f24">Electricity service</p>
+                            <p class="f18">Air Conditioning </p>
+                            <p class="f18">Electrical Panels </p>
+                            <p class="f18">Security System </p>
+                            <p class="f18">Indoor Lighting </p>
+                            <p class="f18">Electrical Services</p>
+                        </div>
+                        <div class="col-lg-1 d-lg-block d-none"></div>
+
+                        <div class="col-lg-2 col-md-6 fade-in">
+                            <p class="f24">Quick Links</p>
+                            <p><a class="f18" href="">Home</a></p>
+                            <p><a class="f18" href="">About</a></p>
+                            <p><a class="f18" href="">Project</a></p>
+                            <p><a class="f18" href="">Service</a></p>
+                            <p><a class="f18" href="">Contact</a></p>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 fade-in">
+                            <p class="f24">Contact US</p>
+                            <p><a class="f18" href="tel:+91 9363318493"><i class="fa fa-volume-control-phone"
+                                        aria-hidden="true"></i>&nbsp; +91 9363318493</a></p>
+                            <p><a class="f18" href="mailto:gow7610124@gmail.com"><i class="fa fa-envelope"
+                                        aria-hidden="true"></i>&nbsp;gow7610124@gmail.com</a></p>
+                            <p><a class="f18" href="https://maps.app.goo.gl/cnLafwaH5qnCu4Z99"><i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;30/1, Vivekanandha Nagar,
+                                    Thekkupalayam
+                                    (po), Coimbatore - 641020</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
     </div>
 </body>
-<script src="js/main.js"></script>
+<script src="../../js/main.js"></script>
+<script src="about.js"></script>
 
 </html>

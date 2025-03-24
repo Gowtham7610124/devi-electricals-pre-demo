@@ -23,7 +23,7 @@ html {
     height: 48px;
 }
 .main-container{
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
 }
 
 
@@ -402,6 +402,47 @@ footer{
 }
 
 
+/* ABOUT US PAGE */
+.about_us_text{
+    background-color: #fae7e8;
+    color: #c90f16;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.f42{
+    font-size: 42px;
+}
+
+.pt80{
+    padding-top: 80px;
+}
+
+.pb80{
+    padding-bottom: 80px;
+}
+
+.bg-container-dull{
+    background-color: #f3f5f7;
+}
+
+.rounded_border{
+    border-radius: 10px;
+}
+
+.div_with_tick i {
+    background-color: #c90f16;
+    color: #ffffff;
+    padding: 6px 6px 4px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+
+
+
 
 
 .container{
@@ -474,7 +515,7 @@ footer{
         font-weight: 600;
     }
 
-    .nav-container_responsive .download_broucher button{
+    .download_broucher button{
         background-color:#c90f16 ;
         width: 100%;
         padding: 15px 15px 15px 15px;
@@ -483,7 +524,7 @@ footer{
         margin: 20px 0 20px 0;
     }
 
-    .nav-container_responsive .download_broucher button a{
+    .download_broucher button a{
         font-weight: 500;
         font-size: 15px;
         color: #ffffff;
