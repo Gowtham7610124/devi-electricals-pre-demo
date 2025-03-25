@@ -1,10 +1,36 @@
 // A $( document ).ready() block.
 $(document).ready(function () {
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "vertical",
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  });
+
   // $(".service_involved_details-list").css("display", "none");
 
   $(".menu-icon").click(function () {
+    console.log(1);
     $(".nav-container_responsive").css("display", "block");
+    console.log(2);
+
     $("body").css("overflow-y", "hidden");
+    console.log(3);
   });
 
   $(".responsive_nav-close ").click(function () {
