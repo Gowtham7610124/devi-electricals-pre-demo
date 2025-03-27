@@ -1,4 +1,5 @@
 // A $( document ).ready() block.
+
 $(document).ready(function () {
   const swiper = new Swiper(".swiper", {
     // Optional parameters
