@@ -23,6 +23,25 @@ $(document).ready(function () {
     },
   });
 
+  // CONTACT FORM
+  // $("#signupForm").validate({
+  //   rules: {
+  //     Name: "required",
+  //     Phone: "required",
+  //     Name: {
+  //       required: true,
+  //       minlength: 2,
+  //     },
+  //   },
+  //   messages: {
+  //     Name: "Please enter your firstname",
+  //     Phone: "Please enter your lastname",
+  //     Name: {
+  //       required: "Please enter a username",
+  //       minlength: "Your username must consist of at least 2 characters",
+  //     },
+  //   },
+  // });
   // $(".service_involved_details-list").css("display", "none");
 
   $(".menu-icon").click(function () {
@@ -38,6 +57,21 @@ $(document).ready(function () {
     $(".nav-container_responsive").css("display", "none");
     $("body").css("overflow-y", "scroll");
   });
+
+  var idFromUrl = window.location.hash;
+
+  // Check if there is an ID in the URL
+  if (idFromUrl) {
+    console.log(idFromUrl);
+    // Scroll to the element with that ID
+    $("html, body").animate(
+      {
+        scrollTop: $(idFromUrl).offset().top,
+      },
+      1000
+    ); // Adjust duration as needed
+    idFromUrl = "";
+  }
 
   // TIME DELAY
   function delay_close() {
@@ -72,32 +106,41 @@ $(document).ready(function () {
       // Disable button to prevent double submission
       $(".contact_form_submit").prop("disabled", true);
 
+      // Create JSON data
+      let data = {
+        access_key: access_key,
+        name: name,
+        email: email,
+        message: message,
+        phone: phone,
+        agree_status: isAgreed,
+      };
+
+      console.log("Sending data:", data);
+
       // AJAX request
       $.ajax({
         url: "https://api.web3forms.com/submit",
         type: "POST",
-        dataType: "JSON",
-        async: false,
-
-        // headers: {
-        //   "X-Requested-With": "XMLHttpRequest",
-        // },
-        // crossDomain: true,
-        data: {
-          access_key: access_key,
-          name: name,
-          email: email,
-          message:
-            message + "   Phone: " + phone + "   Agree status: " + isAgreed,
-        },
+        dataType: "json",
+        contentType: "application/json", // Set correct content type
+        data: JSON.stringify(data), // Convert object to JSON string
         success: function (response) {
-          alert("Form submitted successfully!");
+          console.log("Success", response.message);
           $("#contact_form")[0].reset(); // Reset form after success
           $(".contact_form_submit").prop("disabled", false); // Re-enable button
+          // data-toggle="modal" data-target="#exampleModal"
+          $("#exampleModalCenter").modal("toggle");
+          $("#SomeDiv").html(response);
+          $("#success_modal").modal("show");
+
+          // Close the modal after 4 seconds (4000 ms)
+          setTimeout(function () {
+            $("#success_modal").modal("hide");
+          }, 4000);
         },
         error: function (xhr, status, error) {
-          // alert("Error submitting form.");
-          console.error(xhr); // Debugging
+          console.error("Error:", xhr, status, error);
           $(".contact_form_submit").prop("disabled", false); // Re-enable button
         },
       });

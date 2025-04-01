@@ -73,16 +73,19 @@
 .nav-tabs{
    display: flex !important;
    justify-content: space-around !important;
+   /* width: 10rem !important; */
+   /* border: none; */
 }
 .nav-link{
    cursor: pointer !important;
    border: none !important;
 }
 .nav-tabs .active{
-   background-color: blueviolet !important;
+   background-color: #c90f16 !important;
    width: 10rem !important;
    transition: 1s !important;
    color: #ffffff !important;
+   /* border: none; */
 }
 .tab-pane{
    margin: 0 auto 0 auto !important;
@@ -104,10 +107,10 @@
 }
 
 .service_involved-icon{
-   background-color: rgb(77, 77, 77);
+   background-color: rgb(235, 235, 235);
    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
    padding: 10px;
-   color: #ffffff;
+   color: #808080;
    margin: 15px;
    border-radius: 8px;
    text-align: center;
@@ -117,6 +120,18 @@
 .service_involved-icon:hover{
    transform: scale(1.1);
    transition: 1s;
+}
+@keyframes blinker {
+   50% {
+     opacity: 0;
+   }
+ }
+
+.service_involved-icon:hover .click_me_container{
+   /* font-weight: 500; */
+   color: #c90f16;
+   animation: blinker 1s linear infinite;
+   transition: .5s;
 }
 
 .service_involved-icon img{
@@ -181,9 +196,11 @@
  }
  
  .project-card-back {
-   background: #8b5cf6;
+   /* background: #c90f15; */
+   background: rgba(201, 15, 22, 0.6);
    color: white;
    transform: rotateY(180deg);
+   text-align: center;
  }
  /** Below CSS is completely optional **/
  
@@ -239,4 +256,12 @@
    .service_involved-container{
       padding: 0 0 0px 0;
    }
+    .click_me_container {
+      color: #ffffff;
+      -webkit-animation: blink 800ms step-end infinite;
+              animation: blink 800ms step-end infinite;
+      transition: .3s;
+  }
+  @-webkit-keyframes blink { 50% { color: red; }}
+          @keyframes blink { 50% { color: red; }}
  }
