@@ -129,7 +129,11 @@ html {
   }
   .about_us .img {
     width: 100%;
+    /* border-radius: 300px; */
     /* height: 370px; */
+  }
+  .about_us .img img{
+    border-radius: 20px;
   }
   .about_us .img .img1 {
     width: 300px;
