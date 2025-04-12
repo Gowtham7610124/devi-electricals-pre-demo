@@ -154,8 +154,10 @@
 }
 
 .running_text img {
-    width: 100px; /* Adjust image size */
-    height: auto;
+    width: 150px; /* Adjust image size */
+    height: 40px;
+    margin: 0 5px 0 5px;
+    opacity: .4;
 }
 
 /* .initial_image img{
@@ -175,7 +177,7 @@
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(-10%);
     }
 }
 
