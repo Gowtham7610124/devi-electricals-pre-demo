@@ -88,7 +88,7 @@ $(document).ready(function () {
       e.preventDefault(); // Prevent default button behavior
       console.log("Form submission triggered");
 
-      var access_key = "3e3a7bc4-0d37-4ba1-85d3-d6f2ca525442";
+      var access_key = "66b452e8-2510-43d7-8e60-ecb5777044a7";
 
       // Get form values
       var name = $("input[placeholder='Name']").val().trim();

@@ -158,61 +158,68 @@
  }
  
 
+
+
+
  .project-card {
-   width: 200px;
-   height: 250px;
-   margin: 1rem auto;
-   perspective: 1000px;
-   cursor: pointer;
+   position: relative;
+   width: 300px;
+   height: 200px;
+   overflow: hidden;
+   border-radius: 15px;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   margin: 30px;
+
  }
  
  .project-card-inner {
    position: relative;
    width: 100%;
    height: 100%;
-   transition: transform 0.6s;
-   transform-style: preserve-3d;
  }
  
- .project-card:hover .project-card-inner {
-   transform: rotateY(180deg);
- }
- 
- .project-card-front,
- .project-card-back {
-   position: absolute;
+ .project-card-front img {
    width: 100%;
    height: 100%;
-   backface-visibility: hidden;
+   object-fit: cover;
+   transition: transform 0.5s ease;
+   display: block;
+ }
+ 
+ .project-card-back {
+   position: absolute;
+   bottom: -100%;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(10px);
+   color: white;
    display: flex;
    align-items: center;
    justify-content: center;
-   border-radius: 0.5rem;
- }
-
- .project-card-front img{
-   width: 100%;
-   height: 100%;
- }
- 
- .project-card-front {
-   background: white;
-   border: 1px solid #e5e7eb;
- }
- 
- .project-card-back {
-   /* background: #c90f15; */
-   background: rgba(201, 15, 22, 0.6);
-   color: white;
-   transform: rotateY(180deg);
+   font-size: 1.3rem;
+   font-weight: 600;
    text-align: center;
+   padding: 20px;
+   transition: bottom 0.4s ease-in-out;
+   z-index: 2;
  }
- /** Below CSS is completely optional **/
  
- .gallery-item {
-   width: 200px;
-   padding: 5px;
+ .project-card:hover .project-card-back {
+   bottom: 0;
  }
+ 
+ .project-card:hover .project-card-front img {
+   transform: scale(1.05);
+ }
+ 
+
+
+
+
+
+ 
 @media only screen and (max-width: 600px) {
    .click_card_container{
       padding: 60px 0 50px 0;
@@ -261,6 +268,54 @@
    .service_involved-container{
       padding: 0 0 0px 0;
    }
+
+   .project-card {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+    
+    .project-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+    
+    .project-card-back {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 20px;
+      transform: translateX(100%);
+      opacity: 0;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      z-index: 2;
+    }
+    
+    .project-card.active .project-card-back {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    .project-card:hover .project-card-front img {
+      transform: scale(1.05);
+    }
+    
     .click_me_container {
       color: #ffffff;
       -webkit-animation: blink 800ms step-end infinite;
