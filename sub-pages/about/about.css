@@ -160,11 +160,32 @@
     opacity: .4;
 }
 
-/* .initial_image img{
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.overlay {
   position: absolute;
   top: 0;
-  z-index: 0;
-} */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  backdrop-filter: blur(4px);      /* glass effect */
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 
 
 
