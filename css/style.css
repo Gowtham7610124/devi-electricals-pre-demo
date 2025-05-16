@@ -205,6 +205,7 @@ html {
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: linear;
+    cursor: pointer;
   }
   .bt {
     height: 60px;
@@ -870,8 +871,27 @@ footer{
 
 
 
+progress{
+  height: 20px;
+  background: #c90f16;
+  border-radius: 20px;
+}
 
+progress::-moz-progress-bar {
+  background: lightblue;
+  border-radius: 30%;
+border-radius: 20px;
+}
 
+progress::-webkit-progress-value {
+  background: red;
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-bar {
+  background: rgb(181, 181, 181);
+  border-radius: 20px;
+}
 .container{
     max-width: 1320px !important;
 }
